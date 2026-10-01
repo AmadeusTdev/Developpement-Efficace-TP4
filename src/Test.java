@@ -26,16 +26,16 @@ public class Test {
 		System.out.println(myTree2);
 		
 		// Test arbre normal
-		Tree.Node n21 = new Tree.Node(5);
-		Tree.Node n22 = new Tree.Node(8);
+		Tree.Node<Float> n21 = new Tree.Node<>(5f);
+		Tree.Node<Float> n22 = new Tree.Node<>(8f);
 		
-		List<Tree.Node> myList = new ArrayList<Tree.Node>();
+		List<Tree.Node<Float>> myList = new ArrayList<Tree.Node<Float>>();
 		myList.add(n21);
 		myList.add(n22);
 		
-		Tree.Node n23 = new Tree.Node(5, myList);
+		Tree.Node<Float> n23 = new Tree.Node<>(5f, myList);
 		
-		BinaryTree myTree3 = new Tree(n23);
-		System.out.println(myTree2);
+		Tree<Float> myTree3 = new Tree<Float>(n23);
+		System.out.println(myTree3);
 	}
 }
