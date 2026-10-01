@@ -28,6 +28,14 @@ public class Test {
 		// Test arbre normal
 		Tree.Node n21 = new Tree.Node(5);
 		Tree.Node n22 = new Tree.Node(8);
-		Tree.Node n20 = new Tree.Node(5, new ArrayList<Tree.Node>().addAll(n21, n22));
+		
+		List<Tree.Node> myList = new ArrayList<Tree.Node>();
+		myList.add(n21);
+		myList.add(n22);
+		
+		Tree.Node n23 = new Tree.Node(5, myList);
+		
+		BinaryTree myTree3 = new Tree(n23);
+		System.out.println(myTree2);
 	}
 }

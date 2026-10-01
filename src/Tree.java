@@ -1,31 +1,31 @@
 import java.util.List;
 
-public class Tree {
+public class Tree<T> {
 	// Node class
-	public static class Node {
+	public static class Node<T> {
 		// Private variables
-		private float element;
+		private T element;
 		
-		private Node parent;
-		private List<Node> children;
+		private Node<T> parent;
+		private List<Node<T>> children;
 		
 		// Constructor
-		public Node(float element, List<Node> children) {
+		public Node(T element, List<Node<T>> children) {
 			this.children = children;
 			this.element = element;
 		}
-		public Node(float element) {
+		public Node(T element) {
 			this.element = element;
 		}
 		
 		// Methods
-		public float element() {
+		public T element() {
 			return element;
 		}
-		public Node parent() {
+		public Node<T> parent() {
 			return parent;
 		}
-		public void setParent(Node parent) {
+		public void setParent(Node<T> parent) {
 			this.parent = parent;
 		}
 		
@@ -35,17 +35,17 @@ public class Tree {
 	}
 	
 	// Private variables
-	private Node head;
+	private Node<T> head;
 	
 	// Constructors
-	public Tree(Node head) {
+	public Tree(Node<T> head) {
 		if (head != null) {
 			this.head = head;
 		}
 	}
 	
 	// Methods
-	public Node root() {
+	public Node<T> root() {
 		return head;
 	}
 	
