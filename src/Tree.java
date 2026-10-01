@@ -1,5 +1,4 @@
 import java.util.List;
-import java.util.ArrayList;
 
 public class Tree {
 	// Node class
@@ -13,6 +12,9 @@ public class Tree {
 		// Constructor
 		public Node(float element, List<Node> children) {
 			this.children = children;
+			this.element = element;
+		}
+		public Node(float element) {
 			this.element = element;
 		}
 		

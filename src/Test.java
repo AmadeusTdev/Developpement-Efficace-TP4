@@ -1,6 +1,10 @@
+import java.util.List;
+import java.util.ArrayList;
 
 public class Test {
 	public static void main(String[] args) {
+		
+		// Test arbre binaire
 		BinaryTree.Node n1 = new BinaryTree.Node(1);
 		BinaryTree.Node n2 = new BinaryTree.Node(5);
 		BinaryTree.Node o3 = new BinaryTree.Node(n1, "+", n2);
@@ -20,5 +24,10 @@ public class Test {
 		
 		BinaryTree myTree2 = new BinaryTree(o15);
 		System.out.println(myTree2);
+		
+		// Test arbre normal
+		Tree.Node n21 = new Tree.Node(5);
+		Tree.Node n22 = new Tree.Node(8);
+		Tree.Node n20 = new Tree.Node(5, new ArrayList<Tree.Node>().addAll(n21, n22));
 	}
 }
